@@ -16,6 +16,18 @@ h1 {
     text-decoration: underline;
 }
 
+.city-container {
+    display: flex;
+    align-items: vertical;
+    justify-content: space-evenly;
+
+}
+
+.city-container btn btn-primary {
+    flex-direction: column;
+    align-content: flex-start;}
+
+
 span {
     font-size: 20px;
     font-weight: bolder;
