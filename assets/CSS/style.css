@@ -17,15 +17,28 @@ h1 {
 }
 
 .city-container {
-    display: flex;
+    display: grid;
+    flex: auto;
     align-items: vertical;
     justify-content: space-evenly;
+}
 
+button {
+    align-content: left;
+    
 }
 
 .city-container btn btn-primary {
     flex-direction: column;
-    align-content: flex-start;}
+    align-content: flex-start;
+    
+}
+
+button.btn.btn-primary.btn-lg {
+    margin-right: 1200px;
+    justify-content: space-around;
+   
+}
 
 
 span {
