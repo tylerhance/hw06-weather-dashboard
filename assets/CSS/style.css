@@ -2,6 +2,10 @@
 
 }
 
+:root {
+
+}
+
 header {
     display: grid;
     flex: auto;
@@ -9,21 +13,10 @@ header {
 
 h1 {
     justify-content: center;
+    text-decoration: underline;
 }
 
-#search-bar {
-    justify-content: flex-start;
-    display: flex;
-}
-
-.input-group rounded {
-    justify-content: flex-start;
-    display: flex;
-}
-
-.form-control.rounded {
-    justify-content: flex-start;
-    display: flex;
-    margin: 10px;
-    padding: 5px;
+span {
+    font-size: 20px;
+    font-weight: bolder;
 }
