@@ -16,11 +16,17 @@ h1 {
     text-decoration: underline;
 }
 
+h2 {
+    margin-left: 200px;
+    justify-content: center;
+}
+
 .city-container {
     display: grid;
     flex: auto;
     align-items: vertical;
     justify-content: space-evenly;
+    margin-left: -650px;
 }
 
 button {
@@ -44,4 +50,16 @@ button.btn.btn-primary.btn-lg {
 span {
     font-size: 20px;
     font-weight: bolder;
+}
+
+.forecast-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.card {
+    display:inline-block;
+    margin-top: 50px;
 }
