@@ -4,7 +4,14 @@
 
 body {
     font-size: 18px;
-    font-family: KoHo, Roboto, Arial, Helvetica, sans-serif ;
+    font-family: Roboto, KoHo, Arial, Helvetica, sans-serif;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#currentWeather {
+    display: flex;
+    align-items: center;
 }
 
 .forecast {
