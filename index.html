@@ -5,78 +5,96 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=KoHo:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
     <title>Weather Dashboard</title>
   </head>
   <body>
     <!-- Title / Jumbotron-->
-    <header>
-      <div class="jumbotron jumbotron-fluid mt-2 text-center p-2" style="background-color: #00b9f3; color: #850abe;">
+    
+      <div class="jumbotron jumbotron-fluid mt-2 text-center p-2" style="background-color: #07283a; color: #91badb;">
         <div class="container">
-          <h1> <strong>Weather Dashboard</strong></h1>
+          <h1><strong>Weather Dashboard</strong></h1>
         </div>
       </div>
-    </header>
-
+    
     <main>
-    <!-- Section container for search bar -->
-    <div class="content-wrapper row"></div>
-    <section id="search-bar">
-      <form class="form-inline">
-          <nav class="navbar navbar-light bg-light">
-          <span>Search by City:</span>
-          <input
-            class="form-control mr-sm-2"
-            type="search"
-            placeholder="Enter City Name"
-            aria-label="Search"
-          />
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-            Search
-          </button>
-        </form>
-      </nav>
-    </section>
-    <hr />
-    <!-- Container for cities -->
-    <section>
-      <div class="city-container"></div>
-    </section>
-    <section id="currentWeather">
-      <div class="live-forecast">
-        <div class="jumbotron jumbotron-fluid">
-          <div class="container">
-            <h1 class="display-4">Live Forecast</h1>
-            <p class="lead">
-              This is a modified jumbotron that occupies the entire horizontal
-              space of its parent.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <h2>5-Day Forecast:</h2>
-    <br/>
-    <section id="forecast-container">
-      <!-- Cards section for displaying the 5-day forecast -->
-      <div class="fiveDay">
-        
-    <section>
-      <div class="container">
-        <!-- First container for -->
-      </div>
-    </section>
-  </main>
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
-    ></script>
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.min.js"
-      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
-      crossorigin="anonymous"
-    ></script>
 
-    <script src="./assets/js/script.js"></script>
+    <!-- Section container for search bar -->
+    <div class="container"></div>
+    <div class="row">
+      <div class="col-sm-4 bg-light">
+          <!--Form for handling the inputs-->
+          <h4 class="pt-1"><strong>Search for a City:</strong></h4>
+          <!--Text box for capturing the users searched city -->
+          <div class="input-group mb-3">
+              <input type="text" class="form-control"id="search-city" aria-label="City Search" aria-describedby="search-button">
+              <div class="input-group-append">
+                  <button class=" btn bg-primary text-light" id="search-button"><i class="fa fa-search"></i></button>
+              </div>
+          </div>
+          <!--Section for searched city history-->
+          <button class=" btn btn-primary" type="button" id="clear-history">Clear history</button>
+          <ul class="list-group">
+
+          </ul>
+      </div>   
+      <div class="col-sm-8">
+          <div class="row ml-2 border border-dark rounded">
+              <div class="col-sm-12" id="current-weather">
+                  <h3 class="city-name mb-1 mt-2 bolder" id="current-city"></h3>
+                  <p>Temperature:<span class="current" id="temperature"></span></p>
+                  <p>Humidity:<span class="current" id="humidity"></span></p> 
+                  <p>Wind Speed:<span class="current" id="wind-speed"></span></p>
+                  <p>UV index:<span class="current bg-danger rounded py-2 px-2 text-white" id="uv-index"></span></p> 
+              </div>
+          </div>
+          <!--Row for 5-day weather forecast data -->
+          <div class="col-sm-12" id ="future-weather">
+              <h3>5-Day Forecast:</h3>
+              <div class="row text-light">
+                  <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded" >
+                      <p id="fDate0"></p>
+                      <p id="fImg0"></p>
+                      <p>Temp:<span id="fTemp0"></span></p>
+                      <p>Humidity:<span id="fHumidity0"></span></p>
+                  </div>
+                <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded" >
+                    <p id="fDate1"></p>
+                    <p id="fImg1"></p>
+                    <p>Temp:<span id="fTemp1"></span></p>
+                    <p>Humidity:<span id="fHumidity1"></span></p>
+                </div>
+                <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
+                    <p id="fDate2"></p>
+                    <p id="fImg2"></p>
+                    <p>Temp:<span id="fTemp2"></span></p>
+                    <p>Humidity:<span id="fHumidity2"></span></p>
+                </div>
+                <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
+                    <p id="fDate3"></p>
+                    <p id="fImg3"></p>
+                    <p>Temp:<span id="fTemp3"></span></p>
+                    <p>Humidity:<span id="fHumidity3"></span></p>
+                </div>
+                <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded" >
+                    <p id="fDate4"></p>
+                    <p id="fImg4"></p>
+                    <p>Temp:<span id="fTemp4"></span></p>
+                    <p>Humidity:<span id="fHumidity4"></span></p>
+                </div>
+            </div>
+          </div>
+
+        </div>
+    </div>
+  </div>
+  </main>
+    
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+  <script src="./assets/js/script.js"></script>
   </body>
 </html>
