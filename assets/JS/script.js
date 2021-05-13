@@ -1,5 +1,3 @@
-// Constant for my API key
-const apiKey = "e5f2367964f72502a698afe100a91b44";
 // Variable to store the searched city
 let city = "";
 // Global variable declarations
@@ -12,6 +10,9 @@ let currentHumidity = $("#humidity");
 let currentWindSpeed = $("#wind-speed");
 let currentUvIndex = $("#uv-index");
 let cityArr = [];
+
+// Constant for my API key
+const apiKey = "e5f2367964f72502a698afe100a91b44";
 
 // Function for checking if city exists in local storage
 function find(c) {
