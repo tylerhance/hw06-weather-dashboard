@@ -14,6 +14,11 @@ body {
     align-items: center;
 }
 
+h3 {
+    font-size: 40px;
+    font-weight: bolder;
+}
+
 .forecast {
     font-size: 1em;
 }

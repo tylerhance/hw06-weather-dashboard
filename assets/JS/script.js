@@ -1,12 +1,12 @@
-// constant for my API key
+// Constant for my API key
 const apiKey = "e5f2367964f72502a698afe100a91b44";
-// variable to store the searched city
+// Variable to store the searched city
 let city = "";
-// variable declarations
+// Global variable declarations
 let searchCity = $("#search-city");
-let searchButton = $("search-button");
-let clearButton = $("clear-history");
-let currentCity = $("current-city");
+let searchButton = $("#search-button");
+let clearButton = $("#clear-history");
+let currentCity = $("#current-city");
 let currentTemp = $("#temperature");
 let currentHumidity = $("#humidity");
 let currentWindSpeed = $("#wind-speed");
