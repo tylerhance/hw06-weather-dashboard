@@ -10,6 +10,6 @@
 
 <h2>Links</h2>
 
-* Check out the deployed project @ [coming soon]
+* Check out the deployed project @ https://tylerhance.github.io/weather-dashboard/
 
 ![WeatherDashboardScreenshot](./assets/images/WeatherDashboard.png)
